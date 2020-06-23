@@ -330,7 +330,12 @@ body {
   padding: 0px 1px;
   word-wrap: break-word;
 }
-
+.section_image img{
+  margin: -2.5vh;
+  margin-bottom: 1vh;  
+  max-width: 110%;
+  word-wrap: break-word;
+}
 .about_section {
   font-size: 18px;
   font-family: "Questrial", sans-serif;
@@ -604,7 +609,7 @@ body {
     border: 5px solid blueviolet; background-color: blueviolet;border-radius: 20px
 }
 .yellow{
-    border: 5px solid #fcba03; background-color:#fcba03;border-radius: 20px
+    border: 5px solid #fcba03; background-color:#fcba03;border-radius: 20px;color: black;
 }
 .greenyellow{
     border: 5px solid greenyellow; background-color: greenyellow;border-radius: 20px
@@ -614,4 +619,7 @@ body {
 }
 .pink{
     border: 5px solid deeppink; background-color: deeppink;border-radius: 20px
+}
+.lightgreen{
+    border: 5px solid lightgreen; background-color: lightgreen;border-radius: 20px;color: black;
 }
