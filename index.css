@@ -331,6 +331,8 @@ body {
   word-wrap: break-word;
 }
 .section_image img{
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px black;
   margin: -2.5vh;
   margin-bottom: 1vh;  
   max-width: 110%;
@@ -610,6 +612,9 @@ body {
 }
 .yellow{
     border: 5px solid #fcba03; background-color:#fcba03;border-radius: 20px;color: black;
+}
+.blackyellow{
+    border: 5px solid black; background-color:black;border-radius: 20px;color:#fcba03;
 }
 .greenyellow{
     border: 5px solid greenyellow; background-color: greenyellow;border-radius: 20px
