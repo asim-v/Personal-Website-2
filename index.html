@@ -32,6 +32,7 @@
   <link rel="preload" type="image/gif" as="gif" href="img/garcia.gif">
   <link rel="preload" type="image/gif" as="gif" href="img/fevici.gif">
   <link rel="preload" type="image/gif" as="gif" href="img/ar.gif">
+  <!-- <link rel="preload" type="image/gif" href="https://live.staticflickr.com/65535/49688406007_cd201645b0_o.gif"> -->
   <!-- GIFS -->
 
 
@@ -277,7 +278,22 @@
                                 
                             </div>
                         </section>
-                        </a>                                
+                        </a>     
+                        <a href="https://clubhsdc.web.app" target="_blank">
+                        <section>
+                            <div class="section_image"><img src="img/ciencia.png"  style="box-shadow: none"></div>
+                            <div class="section_title">SinCienciaNoHayFuturo</div>
+                            <div class="about_section">
+                            <span style="display:block;">Site for protesting against science budget cost, 50,000 mails sent until now</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;" class="lightgreen"><i class="fas fa-code"></i>&nbsp; Flask&nbsp;</span>
+                                <span style="display:inline-block;" class="red"><i class="fas fa-code"></i>&nbsp; HTML+CSS&nbsp;</span>
+                                
+                                
+                            </div>
+                        </section>
+                        </a>                                                        
                         <a href="https://github.com/asim-v/Reptilia" target="_blank">
                         <section>
                             <div class="section_image"><img src="img/reptillia.png"  style="box-shadow: none"></div>
@@ -498,20 +514,8 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="giffy.js"></script>
-  <script>
-     $('.giffy-img').giffy();
-  </script>
+<!--     <script type="text/javascript">
 
-    <script type="text/javascript">
-      setTimeout(function() {
-        document.getElementById("loading").classList.add("animated");
-        document.getElementById("loading").classList.add("fadeOut");
-        setTimeout(function() {
-          document.getElementById("loading").classList.remove("animated");
-          document.getElementById("loading").classList.remove("fadeOut");
-          document.getElementById("loading").style.display = "none";
-        }, 800);
-      }, 1500);
       $.getJSON("blog.json", function(blog) {
         blog = blog || [];
         if (blog.length == 0) {
@@ -537,7 +541,7 @@
         return (document.getElementById("blog_section").style.display = "none");
       });
   </script>
-  
+   -->
 
 </body>
 
@@ -548,10 +552,10 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
     apiKey: "AIzaSyC7cdWLwNdU9VLyf3T1tYwyVfj0qBJq8tE",
     authDomain: "emiliobz-befd8.firebaseapp.com",
     databaseURL: "https://emiliobz-befd8.firebaseio.com",
@@ -560,38 +564,49 @@
     messagingSenderId: "145807303765",
     appId: "1:145807303765:web:b23dd6896fbb231c08e0dc",
     measurementId: "G-PFZ9D17WML"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
 
+    const magicProjectsGrid = new MagicGrid({
+    container: "#work_section",
+    animate: false,
+    gutter: 30, // default gutter size
+    static: true,
+    useMin: false,
+    maxColumns: 2,
+    useTransform: true
+    });
 
-<script>
-      const magicProjectsGrid = new MagicGrid({
-        container: "#work_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
+    const magicForksGrid = new MagicGrid({
+    container: "#forks_section",
+    animate: false,
+    gutter: 30, // default gutter size
+    static: true,
+    useMin: false,
+    maxColumns: 2,
+    useTransform: true
+    });
 
-      const magicForksGrid = new MagicGrid({
-        container: "#forks_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
-
-      $("document").ready(() => {
+    $("document").ready(() => {
         magicProjectsGrid.listen();
-        magicForksGrid.listen();
-      });
+        magicForksGrid.listen();        
+        
+    });
+    
+
+    setTimeout(function() {
+    document.getElementById("loading").classList.add("animated");
+    document.getElementById("loading").classList.add("fadeOut");
+    setTimeout(function() {
+      document.getElementById("loading").classList.remove("animated");
+      document.getElementById("loading").classList.remove("fadeOut");
+      document.getElementById("loading").style.display = "none";
+      $('.giffy-img').giffy();    
+    }, 800);
+    }, 1500);
+
     </script>
 
 </html>
