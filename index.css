@@ -697,3 +697,20 @@ body {
   overflow: hidden;
   background-color: #f1f1f1;
 }
+
+@media (max-width: 500px){
+  #profile_img {
+    position: relative;
+    top: 7vh;
+    right: -11vh;
+  }
+  #username{
+    text-align: left;
+  }
+}
+@media (max-width: 321px){
+  #profile_img{
+    top: 12vh;
+    right:-22vh;
+  }
+}
