@@ -605,13 +605,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("https://i.imgur.com/U4KlO4D.png");
+    url("img/bg.png");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("https://i.imgur.com/U4KlO4D.png") center center fixed;
+    url("img/bg.png") center center fixed;
   --height: 50vh;
 }
 
@@ -642,7 +642,7 @@ body {
         rgba(10, 10, 10, 1),
         rgba(10, 10, 10, 0)
       ),
-      url("https://i.imgur.com/U4KlO4D.png") !important;
+      url("img/bg.png") !important;
   }
 }
 .red{
