@@ -22,18 +22,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 
   <!-- GIFS -->
-  <link rel="preload" type="image/gif" as="gif" href="img/ar.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/spaceinv.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/sim.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/seanet.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/sapiens.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/iris.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/history.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/hand.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/guard.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/garcia.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/fevici.gif">
-  <link rel="preload" type="image/gif" as="gif" href="img/ar.gif">
+
   <!-- <link rel="preload" type="image/gif" href="https://live.staticflickr.com/65535/49688406007_cd201645b0_o.gif"> -->
   <!-- GIFS -->
 
@@ -50,7 +39,9 @@
 </div>
       <div id="about">
                 <span style="display:block"><i class="fab fa-google"></i> &nbsp;&nbsp;<a href="https://developers.google.com/community/dsc">Google Developer Student Group</a></span>
+                <span style="display:block;"><i class="fas fa-brain"></i> &nbsp;&nbsp;<a href="https://www.ia2030.mx/">MIT Innovation Bootcamp</a></span>
                 <span style="display:block;"><i class="fas fa-cog"></i> &nbsp;&nbsp;<a href="https://www.ia2030.mx/">IA 2030 Mx</a></span>
+
                 <span style="display:block;"><i class="fas fa-flask"></i> &nbsp;&nbsp;<a href="https://tks.life/profile/javier.emilio.bazan.sanchez#about">Innovator at TKS</a></span>               
                 <span style="display:block;"><i class="fas fa-rocket"></i> &nbsp;&nbsp;<a href="https://launchx.com/">LaunchX 2020</a></span>  
                 <span style="display:block;"><i class="fas fa-users"></i> &nbsp;&nbsp;<a href="https://innova.unam.mx/">Innova UNAM</a></span> 
@@ -122,7 +113,11 @@
 <!-- <span><i class="fas fa-star"></i>&nbsp; 1</span> -->
       <div id="work">
         <h1>My Projects. ⚙️</h1>
-        <div class="projects" id="work_section">
+        <div id="loading-1">
+              <div id="spinner-1"></div>
+            </div>        
+        <div class="projects " id="work_section">
+
                         <a href="https://covibot.me" target="_blank">
                         <section>
                         	<div class="section_image"><img src="img/covibot.png"  style="box-shadow: none"></div>
@@ -167,7 +162,7 @@
                             </div>
                             <div class="section_title">SimulaVirus</div>
                             <div class="about_section">
-                            <span style="display:block;">Javascript Pandemic Simulator! </span>
+                            <span style="display:block;">Agent-Based Javascript Pandemic Simulator! </span>
                             </div>
                             <div class="bottom_section">
                                 <span style="display:inline-block;" class="blackyellow"><i class="fas fa-code"></i>&nbsp; Firebase&nbsp;</span>
@@ -196,7 +191,40 @@
                                 
                             </div>
                         </section>
-                        </a>                               
+                        </a>                
+                        <a href="https://clubhsdc.web.app" target="_blank">
+                        <section>
+                            <div class="section_image"><img src="img/chsdc.png"  style="box-shadow: none"></div>
+                            <div class="section_title">Club-HSDC</div>
+                            <div class="about_section">
+                            <span style="display:block;">Google Sheets Content Managment System </span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;" class="lightgreen"><i class="fas fa-code"></i>&nbsp; Flask&nbsp;</span>
+                                <span style="display:inline-block;" class="red"><i class="fas fa-code"></i>&nbsp; HTML+CSS&nbsp;</span>
+                                
+                                
+                            </div>
+                        </section>
+                        </a>                                         
+                        <a href="http://flask-fire-m2fyddwqda-uc.a.run.app/" target="_blank">
+                        <section>
+                            <div class="section_image">
+                                <img src="img/dignosys.gif " data-cover="img/dignosys.png" class="giffy-img">
+                            </div>
+                            <div class="section_title">Dignosys</div>
+                            <div class="about_section">
+                            <span style="display:block;">This aplication aimed for medical professionals uses  Machine Ensamble Learning with 5 different AI models to process parallel requests for detecting heart risk factor probabilitys from anonymous forms and a semi descentralized system, I built the entire backend and dashboard frontent with MongoDB,Pandas,Tensorflow,Flask and Cloud Run</span>
+                            </div>
+                            <div class="bottom_section">
+                                <span style="display:inline-block;" class="blackyellow"><i class="fas fa-code"></i>&nbsp; Cloud Run&nbsp;</span>
+                                <span style="display:inline-block;" class="lightgreen"><i class="fas fa-code"></i>&nbsp; Flask&nbsp;</span>
+                                <span style="display:inline-block;" class="red"><i class="fas fa-code"></i>&nbsp; HTML+CSS&nbsp;</span>
+                                
+                                
+                            </div>
+                        </section>
+                        </a>      
                         <a href="https://fevici.org" target="_blank">
                         <section>
                             <div class="section_image">
@@ -204,17 +232,17 @@
                             </div>
                             <div class="section_title">FEVICI</div>
                             <div class="about_section">
-                            <span style="display:block;">Fullstack Application, Firebase (Auth,Firestore,RealtimeChat,CI/CD)</span>
+                            <span style="display:block;">Fullstack Application with chat integration, posts, friends realtime messaging, html interactive js CMS, Firebase (Auth,Firestore,RealtimeChat,CI/CD)</span>
                             </div>
                             <div class="bottom_section">
-                                <span style="display:inline-block;" class="blackyellow"><i class="fas fa-code"></i>&nbsp; Firebase&nbsp;</span>
+                                <span style="display:inline-block;" class="blackyellow"><i class="fas fa-code"></i>&nbsp; Cloud Run&nbsp;</span>
                                 <span style="display:inline-block;" class="lightgreen"><i class="fas fa-code"></i>&nbsp; Flask&nbsp;</span>
                                 <span style="display:inline-block;" class="red"><i class="fas fa-code"></i>&nbsp; HTML+CSS&nbsp;</span>
                                 
                                 
                             </div>
                         </section>
-                        </a>                  
+                        </a>                                      
                         <a href="https://github.com/asim-v/Seanet" target="_blank">
                         <section>
                             <div class="section_image">
@@ -281,7 +309,7 @@
                             </div>
                         </section>
                         </a>     
-                        <a href="https://clubhsdc.web.app" target="_blank">
+                        <a href="https://sinciencianohayfuturo.com" target="_blank">
                         <section>
                             <div class="section_image"><img src="img/ciencia.png"  style="box-shadow: none"></div>
                             <div class="section_title">SinCienciaNoHayFuturo</div>
@@ -573,7 +601,7 @@
 
     const magicProjectsGrid = new MagicGrid({
     container: "#work_section",
-    animate: false,
+    animate: true,
     gutter: 30, // default gutter size
     static: true,
     useMin: false,
@@ -598,10 +626,14 @@
     $(window).on('load', function() { 
 
         $("document").ready(() => {
+            // document.html += ' <link rel="preload" type="image/gif" as="gif" href="img/ar.gif"> <link rel="preload" type="image/gif" as="gif" href="img/spaceinv.gif"> <link rel="preload" type="image/gif" as="gif" href="img/sim.gif"> <link rel="preload" type="image/gif" as="gif" href="img/seanet.gif"> <link rel="preload" type="image/gif" as="gif" href="img/sapiens.gif"> <link rel="preload" type="image/gif" as="gif" href="img/iris.gif"> <link rel="preload" type="image/gif" as="gif" href="img/history.gif"> <link rel="preload" type="image/gif" as="gif" href="img/hand.gif"> <link rel="preload" type="image/gif" as="gif" href="img/guard.gif"> <link rel="preload" type="image/gif" as="gif" href="img/garcia.gif"> <link rel="preload" type="image/gif" as="gif" href="img/fevici.gif"> <link rel="preload" type="image/gif" as="gif" href="img/ar.gif">' 
+            document.getElementById('loading-1').style.display = 'none';
+            document.getElementById('work').style.filter = 'none';
+            
             $('.giffy-img').giffy();                        
             magicProjectsGrid.listen();
-            magicForksGrid.listen();   
-            
+            // magicForksGrid.listen();   
+
         });
 
         document.getElementById("loading").classList.remove("animated");

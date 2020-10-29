@@ -10,6 +10,7 @@ $.fn.giffy = function() {
 
 		$(this).wrap("<div class='giffy-container'></div>");
 		$(this).prop('src',cover);
+		
 
 		var container = $(this).parent().parent().parent();
 		$(this).children().children().children().prop('src', cover);
