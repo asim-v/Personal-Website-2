@@ -44,8 +44,7 @@ body {
   position: relative;
   
   transform: translate(-50%,-50%);
-
-  z-index: 999;
+  pointer-events: all;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -315,6 +314,44 @@ body {
   padding: 4vh 0px !important;
 }
 
+.contents {
+  margin-left: -15px;
+  /* align section w/ heading above */
+}
+
+.contents a {
+  /* 30px is the gutter size in magic grid */
+  /*width: calc(49% - 30px);*/
+  /* 49% avoids a weird single column on some wide screens */
+  display: flex;
+  text-decoration: none;
+}
+
+.contents section {
+  width: 100%;
+  padding: 2.5vh 5%;
+  margin: 1vh 0px;
+  display: -webkit-inline-box;
+  border-radius: 5px;
+  color: var(--text-color);
+  /*border: 1px solid rgb(0, 0, 0, 0.08);*/
+  box-shadow: 0px 0px 0px rgb(0, 0, 0, 0);
+  transition: 0.4s ease-in-out;
+  transform: scale(1);
+}
+
+.contents section:hover {
+  cursor: pointer;
+  /*border: 1px solid rgb(0, 0, 0, 0);*/
+  box-shadow: 0px 15px 35px rgb(0, 0, 0, 0.06);
+  transform: scale(1.03);
+}
+
+.contents section:hover .giffy-container:after {
+  display: none;
+}
+
+
 .projects {
   margin-left: -15px;
   /* align section w/ heading above */
@@ -550,7 +587,18 @@ body {
   .projects section {
     width: 88%;
   }
+  .contents {
+    margin-left: 0;
+    /* remove neg margin to align w/ header */
+  }
 
+  .contents a {
+    width: 100%;
+  }
+
+  .contents section {
+    width: 88%;
+  }
   #blogs {
     columns: 1;
   }
@@ -655,6 +703,10 @@ body {
 
 .projects section {
   background: rgb(20, 20, 20);
+}
+
+.contents section{
+ background: rgb(20, 20, 20); 
 }
 
 #blog_section section {
