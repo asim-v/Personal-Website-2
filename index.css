@@ -376,7 +376,7 @@ body {
   padding: 2.5vh 5%;
   margin: 1vh 0px;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 10px;
   color: var(--text-color);
   /*border: 1px solid rgb(0, 0, 0, 0.08);*/
   box-shadow: 0px 0px 0px rgb(0, 0, 0, 0);
@@ -456,11 +456,11 @@ body {
   display: table-caption;
 }
 .horizontal_about {
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Questrial", sans-serif;
   margin: 2vh 0px;
   display: table-row;
-  font-weight: bold;
+  font-weight: normal;
   word-wrap: break-word;
 }
 .horizontal_image{
@@ -493,12 +493,12 @@ body {
   font-size: 18px;
   font-family: "Questrial", sans-serif;
   margin: 2vh 0px;
-  font-weight: bold;
+  font-weight: normal;
   word-wrap: break-word;
 }
 
 .horizontal_section_text{
-  background-color: rgb(20, 20, 20);
+  /*background-color: rgb(20, 20, 20);*/
   width: 50%;
   padding-left: 20px;
 }
@@ -776,7 +776,7 @@ body {
 }
 
 .contents section{
- background: rgb(20, 20, 20); 
+ /*background: rgb(20, 20, 20); */
 }
 
 
