@@ -100,6 +100,16 @@ body {
   font-weight: bold;
   font-family: "Questrial", sans-serif;
 }
+.highlight{
+  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  background-color: #ffffff29;
+  border-radius: 15px;
+  width: fit-content;
+  backdrop-filter:blur(5px);
+}
 
 .emoji {
   width: 18px;
@@ -251,6 +261,7 @@ body {
   min-height: 180px;
   max-width: 180px;
   max-height: 180px;
+
   border-radius: 5px;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -749,13 +760,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("https://i.gifer.com/33Iv.gif");
+    url("img/velasco.jpg");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("https://i.gifer.com/33Iv.gif") center center fixed;
+    url("velasco.jpg") center center fixed;
   --height: 50vh;
 }
 

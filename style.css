@@ -28,16 +28,16 @@ ul.tabs li {
 /*.tab_last { border-right: 1px solid #333; }*/
 
 ul.tabs li:hover {
-	transition: 0.2s;
-	background-color: #ccc;
-	color: #333;
+	transition: 0.1s;
+	background-color: #252525;
+	
 }
 
 ul.tabs li.active {
-	background-color: #fff;
-	color: #333;
-	border-bottom: 1px solid #fff;
-	display: block;
+    background-color: black;
+    color: white;
+    border: 2px solid #fff;
+    display: block;
 }
 
 .tab_container {
