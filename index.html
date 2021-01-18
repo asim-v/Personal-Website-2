@@ -33,7 +33,7 @@
          <div id="userbio" style="display: block;">Fullstack Developer
          </div>
          <div id="about">
-            <span style="display:block;" class="highlight"><i class="fas fa-envelope"></i> &nbsp;&nbsp;<a href="mailto:e@iristech.io">emilio@iristech.io</a></span>
+            <span style="display:block;" class="highlight"><i class="fas fa-envelope"></i> &nbsp;&nbsp;<a href="mailto:emilio@iristech.io">emilio@iristech.io</a></span>
             <span style="display:block;"><i class="fas fa-flask"></i> &nbsp;&nbsp;<a href="https://tks.life/profile/javier.emilio.bazan.sanchez#about">Innovator at TKS</a></span>
             <span style="display:block"><i class="fas fa-code"></i> &nbsp;&nbsp;<a href="https://udacity-email.s3-us-west-2.amazonaws.com/Bertelsmann+Badge+Phase+1_12.1.2020.jpg?bsft_eid=c0748284-13bf-40d2-accb-cc4d0bc4a1d5&bsft_aaid=affd8710-61ff-4001-baca-1d4a7303381d&utm_campaign=sch_600_2020-12-01_ndxxx_bertelsmann-winner_global&utm_source=blueshift&utm_medium=email&utm_content=sch_600_2020-12-01_ndxxx_bertelsmann-winner_global&bsft_clkid=5d9efd7a-4fdb-4e4f-bd8c-26eb70065eb8&bsft_uid=1a2e7c66-0952-4611-b460-8f697171d5c4&bsft_mid=52b2e837-deab-4f67-a61c-553870a54293&bsft_link_id=22&bsft_mime_type=html&bsft_ek=2020-12-01T14%3A11%3A17Z&bsft_lx=4&bsft_tv=12">Udacity Bertelsmann Scholar</a></span>
             <span style="display:block"><i class="fab fa-google"></i> &nbsp;&nbsp;<a href="https://developers.google.com/community/dsc">Google Developer Student Group</a></span>
@@ -93,9 +93,10 @@
                <ul class="tabs">
                   <li class="active" rel="tab1">About Me</li>
                   <li rel="tab3" onclick="window.dispatchEvent(new Event('resize'));">Projects</li>
-                  <li rel="tab2">Content</li>
-                
+                  <li rel="tab2">Content</li>                
+                  <li rel="tab5">Blog</li>
                   <li rel="tab4">Extra</li>
+
                </ul>
                <div class="tab_container">
                   <!-- <h3 class="d_active tab_drawer_heading" rel="tab1">Tab 1</h3> -->
@@ -104,9 +105,9 @@
                         <h1>Hello! 👋🏽</h1>
                         <div class="projects" id="forks_section" style="padding-top: 15px;">
                            <a href="https://analista-ai.web.app" style="color: #fcba03;position: relative !important;display: inline;font-weight: 600"> Analista.ai</a> <br><b>CEO</b><br><br><br>
-                           I'm Emilio, and I'm mixing human consciousness with machine intelligence + digital activist in my free time!
+                           I'm Emilio, and I'm mixing human consciousness with machine intelligence + digital activism in my free time!
                            <br><br>
-                           Certified computing tecnician, self-taught software engineer, specialized in product development, full-stack python, deployment of client-server side AI. Highly experienced in natural language understanding, real-time vision, and a very strong intrest in cognitive and computational social science.
+                           Certified computing tecnician, self-taught software engineer, specialized in full-stack python, product development, production level client-server AI. Highly experienced in natural language understanding, real-time vision, and a very strong intrest in cognitive/computational social science.
                         </div>
                         <div class="projects" id="forks_section" style="padding-top: 15px;">
                            Here you can find most of my open source and in-progress work, a +100 book AI library and my calendar for setting up meetings 
@@ -736,8 +737,65 @@
                   </div>
                   <!-- #tab3 -->
                   <!-- <h3 class="tab_drawer_heading" rel="tab4">Tab 4</h3> -->
+                  <div id="tab5" class="tab_content">
+                     
+                        <div id="forks">
+                        <h1>My content.</h1>
+                        <div class="contents" id="forks_section" style="contents section{background: none !important; } ">
+                                             
+                           <div id="app">
+                              <section v-for="x in todos" style="padding: 1.5vh 20px">        
+                                 <a href="" target="_blank"  v-bind:href="x.link">  
+                                    <section style="padding: 1vh 20px">                                      
+                                       <div class="horizontal_section_text" style="width: 100%">
+                                          <div class="horizontal_title" style="display:contents ">{{x.title}}</div>
+                                          <div class="horizontal_about">
+                                             <span style="display:block;padding-top: 20px;padding-bottom: 20px;">{{x.pubDate}}</span>
+                                          </div>
+                                          <div class="horizontal_bottom" style="display: inline-block" v-for="y in x.categories">
+                                             <span style="display:inline;" class="blackyellow"></i>&nbsp; {{y}} &nbsp;</span>
+                                             <!--  -->
+                                          </div>
+                                       </div>
+                                    </section>                                 
+                                 </a>     
+                              </section> 
+                           </div>
+
+                           <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+                           <script type="text/javascript">
+                              // loads feed 
+                              // https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@user
+                              // https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@emiliobazan
+                              const MdFetch = async (name) => {
+                                const res = await fetch(
+                                  `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${name}`
+                                );
+                                return await res.json();
+                              };
+                              MdFetch('@davideast').then(
+                                 function(value){
+
+                                 var todos = value.items;
+                                 myObject = new Vue({
+                                    el: '#app',
+                                    data: {
+                                     todos: todos
+                                    }
+
+                                 })
+                                 },
+                                 function(error){console.log('Error');}
+                              );
+                           </script>
+
+                        </div>
+                        </div>
+                     
+                  </div>                  
+                  <!-- <h3 class="tab_drawer_heading" rel="tab4">Tab 4</h3> -->
                   <div id="tab4" class="tab_content">
-                     <div id="footer" id="thanks" style="display: none">
+                     <div id="footer" >
                         <a href="https://github.com/asim-v" target="_blank">Life shinks or expands in proportion to one's courage</a><br><br>
                         <a href="" >Thanks to Veronica ,Jose, Ángel, Ray , Prof. Tino, Prof. Dany, Prof. Pantoja, Prof. Canul,  Mely, Siddharta, Jan, Joshi, JianLi, Alfredo, Clau, Raúl, Tch. Greta, Tch. Darinka , Prof. Paco,Prof. Noemí, Prof.Dave , Prof. Francisco, Prof James, Prof Julio, Juan Pablo, for their priviledged invaluable wisdom, passion, knowledge, time, love, criticism, honesty, second chances, feedback and for opening their doors to me, because I've found what I love and who I am thanks to you, despite my incongruencies and mistakes, in a country of conformity and ignorance.❤️</a>
                      </div>
