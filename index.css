@@ -498,6 +498,29 @@ body {
   .horizontal_section_text{
     width: 100% !important;
   }
+  #about {
+    font-size: 14px;
+    text-align: left;
+    font-family: "Questrial", sans-serif;
+  }
+  #profile_img {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0px auto !important;
+  }  
+  #userbio {
+    font-size: 23px;
+    font-family: "Questrial", sans-serif;
+    width: 100%;
+    display: flex;
+  }
+  #tabs{
+    display: flex;
+  }
 }
 
 .about_section {
@@ -803,8 +826,9 @@ body {
         rgba(10, 10, 10, 1),
         rgba(10, 10, 10, 0)
       ),
-      url("https://i.gifer.com/33Iv.gif") !important;
+      url("img/velasco.jpg") !important;
   }
+
 }
 .red{
     border: 5px solid orangered; background-color: orangered;border-radius: 20px
@@ -861,9 +885,9 @@ body {
 
 @media (max-width: 800px){
   #profile_img {
-    position: relative;
+    position: absolute;
     top: 7vh;
-    right: -11vh;
+    right: 20px;
   }
   #username{
     text-align: left;

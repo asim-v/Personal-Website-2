@@ -30,10 +30,11 @@
       <div id="profile">
          <div id="profile_img" style="background: url(https://avatars0.githubusercontent.com/u/52850142?v=4) center;" onclick="window.location.replace('https://www.youtube.com/watch?v=mRIbYSFjSDk&ab_channel=EmilioBazan')"></div>
          <div id="username"><span style="display:block;">Emilio Bazán</span><a href="https://github.com/asim-v"><i class="fab fa-github"></i> @asim-v</a></div>
-         <div id="userbio" style="display: block;">Fullstack Developer
+         <div id="userbio" >Fullstack Developer
          </div>
          <div id="about">
             <span style="display:block;" class="highlight"><i class="fas fa-envelope"></i> &nbsp;&nbsp;<a href="mailto:emilio@iristech.io">emilio@iristech.io</a></span>
+            <span style="display:block;" class="highlight"><i class="fas fa-link"></i> &nbsp; <a href="https://www.linkedin.com/in/javier-emilio-baz%C3%A1n-s%C3%A1nchez-910441179/">Linkedin</a></span><br>
             <span style="display:block;"><i class="fas fa-flask"></i> &nbsp;&nbsp;<a href="https://tks.life/profile/javier.emilio.bazan.sanchez#about">Innovator at TKS</a></span>
             <span style="display:block"><i class="fas fa-code"></i> &nbsp;&nbsp;<a href="https://udacity-email.s3-us-west-2.amazonaws.com/Bertelsmann+Badge+Phase+1_12.1.2020.jpg?bsft_eid=c0748284-13bf-40d2-accb-cc4d0bc4a1d5&bsft_aaid=affd8710-61ff-4001-baca-1d4a7303381d&utm_campaign=sch_600_2020-12-01_ndxxx_bertelsmann-winner_global&utm_source=blueshift&utm_medium=email&utm_content=sch_600_2020-12-01_ndxxx_bertelsmann-winner_global&bsft_clkid=5d9efd7a-4fdb-4e4f-bd8c-26eb70065eb8&bsft_uid=1a2e7c66-0952-4611-b460-8f697171d5c4&bsft_mid=52b2e837-deab-4f67-a61c-553870a54293&bsft_link_id=22&bsft_mime_type=html&bsft_ek=2020-12-01T14%3A11%3A17Z&bsft_lx=4&bsft_tv=12">Udacity Bertelsmann Scholar</a></span>
             <span style="display:block"><i class="fab fa-google"></i> &nbsp;&nbsp;<a href="https://developers.google.com/community/dsc">Google Developer Student Group</a></span>
@@ -44,7 +45,7 @@
             <span style="display:block;"><i class="fas fa-users"></i> &nbsp;&nbsp;<a href="https://innova.unam.mx/">Innova UNAM</a></span> 
             <!-- <span style="display:block;"><i class="fas fa-atom"></i> &nbsp; Asimov Network</span> -->
             <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-            <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a href="https://www.linkedin.com/in/javier-emilio-baz%C3%A1n-s%C3%A1nchez-910441179/">Linkedin</a></span>
+            <br>
             <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp;Mexico City</span>
             
             <div class="socials">
@@ -90,8 +91,8 @@
             </head>
             <body>
                <!-- partial:index.partial.html -->
-               <ul class="tabs">
-                  <li class="active" rel="tab1">About Me</li>
+               <ul class="tabs" id="tabs">
+                  <li class="active" rel="tab1">About</li>
                   <li rel="tab3" onclick="window.dispatchEvent(new Event('resize'));">Projects</li>
                   <li rel="tab2">Content</li>                
                   <li rel="tab5">Blog</li>
