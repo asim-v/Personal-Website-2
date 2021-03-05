@@ -475,7 +475,8 @@ body {
   word-wrap: break-word;
 }
 .horizontal_image{
-  width: 50%
+  width: 40%
+
 }
 .horizontal_image img{
   border-radius: 15px;
